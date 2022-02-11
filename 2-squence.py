@@ -29,4 +29,5 @@ print(len(numbers)) # -> 10
 print(min(numbers)) # -> 0
 print(max(numbers)) # -> 9
 print(numbers.index(8, 5, 10)) # -> 8
+print(numbers.index(3, 5, 10)) # -> Exception has occurred: ValueError 3 is not in list
 print(days.count('Mon')) # -> 2
