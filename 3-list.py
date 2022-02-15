@@ -1,39 +1,14 @@
-numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-days = ['Mon', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun']
-time_zone = ['morning', 'afternoon', 'evening', 'night']
+list_empty_01 = []
+print(list_empty_01) # -> []
 
-numbers[1:3] = time_zone;
-print(numbers)
-# -> [0, 'morning', 'afternoon', 'evening', 'night', 3, 4, 5, 6, 7, 8, 9]
+list_empty_02 = list()
+print(list_empty_02) # -> []
 
-del numbers[0:5] 
-print(numbers) # -> [5, 6, 7, 8, 9]
+list_01 = list('abc')
+print(list_01) # -> ['a', 'b', 'c']
 
-numbers.append(10)
-print(numbers) # -> [5, 6, 7, 8, 9]
+list_02 = list((1, 2, 3))
+print(list_02) # -> [1, 2, 3]
 
-time_zone.clear()
-print(time_zone) # -> []
-
-days_copy = days.copy()
-print(days_copy) # -> ['Mon', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun']
-
-days.extend(time_zone);
-print(days)
-# -> ['Mon', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun', 'morning', 'afternoon', 'evening', 'night']
-
-double_time = time_zone * 2
-print(double_time)
-# -> ['morning', 'afternoon', 'evening', 'night', 'morning', 'afternoon', 'evening', 'night']
-
-numbers.insert(3, 10)
-print(numbers) # -> [0, 1, 2, 10, 3, 4, 5, 6, 7, 8, 9]
-
-time_zone.pop()
-print(time_zone) # -> ['morning', 'afternoon', 'evening']
-
-days.remove('Mon')
-print(days) # -> ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun']
-
-numbers.reverse()
-print(numbers) # -> [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+list_03 = [num for num in list_02]
+print(list_02) # -> [1, 2, 3]
