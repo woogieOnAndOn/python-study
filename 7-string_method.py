@@ -143,3 +143,49 @@ print(first) # -> AAA-BBB
 print(separator) # -> -
 print(rest) # -> CCC
 
+print('A B C D E F G H'.rsplit()) # -> ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
+print('A-B-C-D-E-F-G-H'.rsplit('-')) # -> ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
+print('A-B-C-D-E-F-G-H'.rsplit('-', 4)) # -> ['A-B-C-D', 'E', 'F', 'G', 'H']
+
+print('    spacious   '.rstrip()) # -> ____spacious
+print('mississippi'.rstrip('ipz')) # -> mississ
+
+print('A B C D E F G H'.split()) # -> ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
+print('A-B-C-D-E-F-G-H'.split('-')) # -> ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
+print('A-B-C-D-E-F-G-H'.split('-', 4)) # -> ['A', 'B', 'C', 'D', 'E-F-G-H']
+
+print('ab c\n\nde fg\rkl\r\n'.splitlines()) # -> ['ab c', '', 'de fg', 'kl']
+print('ab c\n\nde fg\rkl\r\n'.splitlines(keepends=True)) # -> ['ab c\n', '\n', 'de fg\r', 'kl\r\n']
+print(''.splitlines()) # -> []
+print('One line\n'.splitlines()) # -> ['One line']
+print(''.split('\n')) # -> ['']
+print('Two lines\n'.split('\n')) # -> ['Two lines', '']
+
+print('First_line'.startswith('First_')) # -> True
+print('First_line'.startswith('first_')) # -> False
+print('First_line'.startswith('First_', 0)) # -> True
+print('First_line'.startswith('First_', 1, 5)) # -> False
+
+print('   spacious   '.strip()) # -> spacious
+print('www.example.com'.strip('cmowz.')) # -> example
+print('#....... Section 3.2.1 Issue #32 .......'.strip('.#! ')) # _> Section 3.2.1 Issue #32
+
+print('AbCd'.swapcase()) # -> aBcD
+print('aBcD'.swapcase()) # -> AbCd
+
+print('hello world'.title()) # -> Hello World
+print("they're bill's friends from the UK".title()) # -> They'Re Bill'S Friends From The Uk
+
+import re
+def titlecase(s):
+  return re.sub(r"[A-Za-z]+('[A-Za-z]+)?",
+                lambda mo: mo.group(0).capitalize(),
+                s)
+  
+print(titlecase("they're bill's friends from the UK"))
+# -> They're Bill's Friends From The Uk
+
+print('abcd'.upper()) # -> ABCD
+
+print('42'.zfill(5)) # -> 00042
+print('-42'.zfill(5)) # -> -0042
